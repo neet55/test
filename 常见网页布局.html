@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>常见网页布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #eee;
+        }
+
+        div {
+            background-color: #fff;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .top {
+            height: 100px;
+        }
+
+        .banner {
+            width: 980px;
+            height: 300px;
+            margin: 10px auto;
+        }
+
+        .box {
+            width: 980px;
+            /* height: 300px; */
+            margin: 10px auto;
+            /* overflow: hidden; */
+        }
+
+        .box li {
+            float: left;
+            width: 237px;
+            height: 300px;
+            background-color: pink;
+            margin: 7px 0 0 7px;
+        }
+
+        /* .box .last {
+            margin-right: 0;
+        } */
+
+        .footer {
+            height: 200px;
+            margin-top: 10px;
+        }
+
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">top</div>
+    <div class="banner">banner</div>
+    <div class="box clearfix">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>?</li>
+            <li>?</li>
+            <li>?</li>
+            <li>?</li>
+            <li>?</li>
+            <li>?</li>
+            <li>4</li>
+            <!-- 隔墙法清除浮动 -->
+            <!-- <div class="clear"></div> -->
+        </ul>
+    </div>
+    <div class="footer">footer</div>
+</body>
+
+</html>
